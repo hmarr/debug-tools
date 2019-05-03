@@ -1,5 +1,10 @@
 # debug-tools
 
+A Docker image with several useful debugging tools. Check the Dockerfile to see
+which packages are installed.
+
+## Usage
+
 Published to [Docker Hub](https://hub.docker.com/r/hmarr/debug-tools) as
 `hmarr/debug-tools`.
 
