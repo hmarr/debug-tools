@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   dnsutils \
   htop \
+  iproute2 \
   iputils-ping \
   lsof \
   ltrace \
