@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
   htop \
   iproute2 \
   iputils-ping \
+  jq \
   lsof \
   ltrace \
   net-tools \
@@ -19,3 +20,8 @@ RUN apt-get update && apt-get install -y \
   strace \
   sysstat \
   wget
+
+RUN curl "https://api.github.com/repos/rbspy/rbspy/releases/latest" \
+  | jq -r '.assets[] | select(.name | contains("linux")) | .browser_download_url' \
+  | wget -i - -O - \
+  | tar -C /usr/bin -xz rbspy
